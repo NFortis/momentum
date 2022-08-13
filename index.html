@@ -1,0 +1,222 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link href="assets/favicon.ico" rel="shortcut icon" />
+    <link rel="stylesheet" href="css/owfont-regular.css" />
+    <link rel="stylesheet" href="css/style.css" />
+    <link rel="stylesheet" href="css/setting.css" />
+    <link rel="stylesheet" href="css/keywords.css" />
+    <title>momentum</title>
+</head>
+
+<body id="body">
+    <header class="header">
+        <div class="player" id="player1">
+            <div class="player-controls">
+                <button class="play-prev player-icon"></button>
+                <button class="play player-icon"></button>
+                <button class="play-next player-icon"></button>
+            </div>
+            <div class="audio__container">
+                <p class="track__name">Track name</p>
+            </div>
+            <input class="progress" type="range" min="0" max="100" value="0" id="progress__audio">
+            <div class="time__container">
+                <p class="exact-time" id="exact-time">00:00</p>
+                <p class="duration-time" id="duration-time">00:00</p>
+            </div>
+            <div class="volume__container">
+                <input class="volume progress" type="range" min="0" max="100" value="20">
+                <button class="audio-mute">Вкл</button>
+            </div>
+            <ul class="play-list"></ul>
+        </div>
+
+        <div class="weather" id="weather1">
+            <i class="weather-icon owf"></i>
+            <div class="weather-error"></div>
+            <div class="description-container">
+                <span class="temperature"></span>
+                <span class="weather-description"></span>
+            </div>
+            <div class="wind"></div>
+            <div class="humidity"></div>
+        </div>
+
+        <div class="mysetting">
+            <a class="setting__link" href="#">
+                <svg xmlns="http://www.w3.org/2000/svg" width="30" height="30" fill="currentColor" viewBox="0 0 20 20">
+                    <path fill-rule="evenodd"
+                        d="m7.22 3.38.01-.03a4.15 4.15 0 0 1 .17-.48c.36-.82.95-1.29 1.86-1.36l.16-.01h1.21c1.05.03 1.74.6 2.1 1.7l.05.18.05.16c.01.07.03.14.06.2l.05.14.03.02.06-.02.11-.04.14-.06a5.36 5.36 0 0 1 .17-.08l.03-.01a4.23 4.23 0 0 1 .43-.15c.93-.27 1.68-.08 2.32.61l.1.13.72.88c.63.83.61 1.72 0 2.68l-.12.16-.1.14-.12.18-.06.1-.03.05v.02l.08.05.11.06.13.08c1.21.61 1.71 1.42 1.52 2.54l-.03.16-.22.92c-.13.59-.24.87-.67 1.25a2.13 2.13 0 0 1-1.05.52h-.01a3.92 3.92 0 0 1-.44.06l-.2.02H15.63l-.16.01-.16.02.01.13.01.08.03.15c.07.32.1.62.1.9a2.04 2.04 0 0 1-1.13 1.87l-.15.08-1.02.5c-.9.4-1.72.23-2.48-.47a3.93 3.93 0 0 1-.15-.14l-.13-.14-.11-.13a2.94 2.94 0 0 0-.15-.17l-.09-.08-.04-.04-.08.08-.09.1-.1.1c-.83.99-1.7 1.34-2.77.93l-.15-.06-.91-.45-.28-.13a1.78 1.78 0 0 1-.87-.92 2.15 2.15 0 0 1-.2-1.01v-.02c0-.19.02-.39.06-.6l.04-.2.04-.2.01-.15-.1-.02-.12-.01h-.15a4.14 4.14 0 0 1-.86-.1h-.01a2.05 2.05 0 0 1-1.61-1.53l-.05-.16-.25-1.1c-.2-1.03.2-1.82 1.19-2.41l.17-.1.15-.08.19-.1.13-.1v-.01l-.05-.1-.07-.1-.09-.13a5.2 5.2 0 0 1-.29-.42c-.54-.9-.53-1.72.05-2.52l.1-.14.72-.87c.68-.8 1.56-.96 2.64-.56l.18.08.16.07a2.9 2.9 0 0 0 .19.08l.12.04.03-.02.03-.07.04-.12.04-.15.04-.16Zm4.24.84.01.04.05.14a1.5 1.5 0 0 0 .75.83l.03.01a1.5 1.5 0 0 0 1.13.08l.06-.02a1.47 1.47 0 0 0 .07-.02l.12-.04.06-.03.13-.06.04-.01a2.7 2.7 0 0 1 .41-.16c.27-.08.41-.06.47-.04.06.01.16.05.32.22l.07.09.69.84c.13.18.15.29.15.35 0 .09-.03.27-.23.58l-.08.12-.08.1a4.4 4.4 0 0 0-.18.27l-.02.02-.06.1v.01l-.01.02-.03.05a1.5 1.5 0 0 0-.18 1.06v.01a1.5 1.5 0 0 0 .65.96l.08.05.05.04.1.06.07.03.13.08.04.01c.45.24.62.43.67.52.04.06.09.16.04.42l-.02.12-.2.89c-.07.28-.1.35-.11.37h-.01a.97.97 0 0 1-.1.11.65.65 0 0 1-.36.16 2.36 2.36 0 0 1-.25.04h-.16l-.13.01h-.08a4.55 4.55 0 0 0-.28.02l-.15.02a1.5 1.5 0 0 0-1.32 1.63l.01.12v.07l.02.09.01.06.03.15v.05c.06.23.07.42.07.55 0 .2-.04.3-.07.35a.72.72 0 0 1-.28.24l-.1.05-.98.47c-.2.1-.32.09-.38.07-.08-.01-.23-.06-.46-.28a2.38 2.38 0 0 1-.08-.07l-.1-.1-.09-.11a4.39 4.39 0 0 0-.21-.24l-.02-.01-.08-.09a1.43 1.43 0 0 0-.04-.03l-.04-.04a1.5 1.5 0 0 0-2.05.01l-.08.08a1.43 1.43 0 0 0-.04.04l-.1.1a1.53 1.53 0 0 0-.04.04l-.1.12-.03.03c-.31.37-.53.5-.64.53-.08.03-.19.05-.42-.03l-.1-.04-.86-.42-.24-.12a1.19 1.19 0 0 1-.13-.08v-.01a1.08 1.08 0 0 1-.09-.15.67.67 0 0 1-.06-.34l.04-.36.04-.18a4.38 4.38 0 0 0 .06-.35l.01-.15a1.5 1.5 0 0 0-.43-1.22 1.5 1.5 0 0 0-.86-.43h-.1a1.4 1.4 0 0 0-.06-.02h-.13a1.54 1.54 0 0 0-.06-.01h-.19a2.66 2.66 0 0 1-.55-.07c-.22-.05-.3-.11-.35-.15a.7.7 0 0 1-.17-.32L3.26 12l-.24-1.05c-.04-.22 0-.33.02-.38.04-.08.15-.23.46-.42l.13-.08.12-.06a4.43 4.43 0 0 0 .31-.18l.14-.09a1.5 1.5 0 0 0 .65-.94v-.02a1.5 1.5 0 0 0-.17-1.07l-.05-.09a1.49 1.49 0 0 0-.04-.06l-.07-.11a1.5 1.5 0 0 0-.04-.06l-.09-.12a1.52 1.52 0 0 0-.02-.03c-.31-.4-.37-.65-.38-.76 0-.06 0-.18.15-.4L4.2 6l.68-.83c.16-.18.27-.21.33-.23.1-.02.28-.03.63.1l.13.06.13.05a4.42 4.42 0 0 0 .31.13l.12.04a1.5 1.5 0 0 0 1.14-.05l.03-.02a1.5 1.5 0 0 0 .76-.82l.03-.08.02-.07.04-.12.02-.06.04-.14.01-.04.03-.12.12-.32c.1-.23.19-.32.24-.36.04-.03.13-.09.34-.1l.1-.01h1.14c.24.01.34.07.39.11.07.06.2.2.3.54l.05.14.03.13.1.3ZM10 11.5a1.5 1.5 0 1 0 0-3 1.5 1.5 0 0 0 0 3Zm0 1.5a3 3 0 1 0 0-6 3 3 0 0 0 0 6Z"
+                        clip-rule="evenodd"></path>
+                </svg>
+                <span class="setting__link__text">Setting</span>
+                <div class="TopNavBtn__profileArrow"><svg fill="none" height="8" viewBox="0 0 12 8" width="12"
+                        xmlns="http://www.w3.org/2000/svg">
+                        <path clip-rule="evenodd"
+                            d="M2.16 2.3a.75.75 0 0 1 1.05-.14L6 4.3l2.8-2.15a.75.75 0 1 1 .9 1.19l-3.24 2.5c-.27.2-.65.2-.92 0L2.3 3.35a.75.75 0 0 1-.13-1.05z"
+                            fill="currentColor" fill-rule="evenodd"></path>
+                    </svg></div>
+            </a>
+            <div class="setting">
+                <div class="setting__inner">
+                    <div class="setting__item">
+                        <p class="setting__item__text">Application Language</p>
+                        <div class="language__wrapper">
+                            <img class="language__img" id="en"
+                                src="https://media.flaticon.com/dist/min/img/flags/en.svg" width="40" height="35"
+                                loading="lazy">
+                            <img class="language__img" id="ru"
+                                src="https://media.flaticon.com/dist/min/img/flags/ru.svg" width="45" height="35"
+                                loading="lazy">
+                        </div>
+                    </div>
+                    <div class="setting__item">
+                        <p class="setting__item__text">Image Source</p>
+                        <div class="setting__images">
+                            <div class="images__item" id="github">GitHub</div>
+                            <div class="images__item" id="unsplash">Unsplash API</div>
+                            <div class="images__item" id="flickr">FlickR API</div>
+                        </div>
+                        <div class="keywords-box">
+                            <div class="keywords__input-wrapper">
+                                <input class="keywords__input" type="text" id="keywords-input" required>
+                                <label class="keywords__label" for="keywords-input">Key Words</label>
+                                <div class="keywords__buttons">
+                                    <button class="keyword__button keyword__button-green" id="setKeyWords"><span
+                                            class='keyword__button__text'>Применить</span><span
+                                            class="keyword__button__icon"><img src="assets/svg/checked.svg"
+                                                alt="keyword__check" height="16" width="16"
+                                                class="key__word__log"></span></button>
+                                    <button class="keyword__button keyword__button-red" id="clearKeyWords"><span
+                                            class='keyword__button__text'>Убрать</span><span
+                                            class="keyword__button__icon"><img src="assets/svg/cross.svg"
+                                                alt="keyword__check" height="16" width="16"
+                                                class="key__word__log"></span></button>
+                                </div>
+                            </div>
+                            <div class="keywords-list">
+                            </div>
+                        </div>
+                    </div>
+                    <div class="setting__item">
+                        <p class="setting__item__text">Widgets</p>
+                        <div class="setting__componets">
+                            <div class="components__left">
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/time.svg" alt="time-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Time</p>
+                                    </div>
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="time" />
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/date.svg" alt="date-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Date</p>
+                                    </div>
+
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="date" />
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/weather.svg" alt="weather-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Weather</p>
+                                    </div>
+
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="weather">
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="components__right">
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/player.svg" alt="player-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Player</p>
+                                    </div>
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="player">
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/greeting.svg" alt="greeting-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Greeting</p>
+                                    </div>
+
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="greeting">
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+
+                                <div class="setting__vidget">
+                                    <div class="vidjet__name">
+                                        <img src="assets/svg/quote.svg" alt="time-log" width="25" height="25"
+                                            class="vidget__img">
+                                        <p class="vidjet__text">Quotes</p>
+                                    </div>
+
+                                    <div class="button r" id="button">
+                                        <input type="checkbox" class="checkbox" id="quotes">
+                                        <div class="knobs"></div>
+                                        <div class="layer"></div>
+                                    </div>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+
+    </header>
+    <main class="main">
+        <div class="slider-icons">
+            <button class="slide-prev slider-icon"></button>
+            <button class="slide-next slider-icon"></button>
+        </div>
+        <time class="time" id="time1"></time>
+        <date class="date" id="date1"></date>
+        <div class="greeting-container" id="greeting1">
+            <span class="greeting"></span>
+            <input type="text" class="name" placeholder="[Your name]">
+        </div>
+    </main>
+    <footer class="footer">
+        <div class="quote__wraper" id="quotes1">
+            <button class="change-quote"></button>
+            <div>
+                <div class="quote"></div>
+                <div class="author"></div>
+            </div>
+        </div>
+    </footer>
+    <script src="dist/bundle.js"></script>
+</body>
+
+</html>
